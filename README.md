@@ -5,9 +5,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 An Add-on to any Agency Management System that helps Agents with sales, engagement, analytics, and mobility. Insurance Agents/Support Teams utilize InsuredMine’s Agency Portal and Mobile App to manage clients & prospects, offering an omnichannel presence and last mile connectivity.
 
+## Prerequisite 
+
+node and angular installed in local system.
+
 ## Development server
 
-Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm install` to install node_modules and then `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Login Users Array
 
