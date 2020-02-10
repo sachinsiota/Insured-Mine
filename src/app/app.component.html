@@ -1,0 +1,33 @@
+
+    <div class="menu">
+        <div class="leftmenu">
+            <img class="logo" src="../assets/image/logo.png" alt="logo" matTooltip="Logo">
+        </div>
+        <div class="rightmenu">
+            <ul>
+                <li routerLinkActive="active" routerLink="home" [routerLinkActiveOptions]="{exact: true}" matTooltip="Home"> 
+                    Home  
+                </li>
+                <li routerLinkActive="active" routerLink="about" matTooltip="About"> 
+                    About
+                </li>
+                <li *ngIf = "authService.loggedIn" routerLinkActive="active" routerLink="gallery" matTooltip="Gallery">  
+                    Gallery 
+                </li>
+                <li *ngIf = "!authService.loggedIn" routerLinkActive="active" routerLink="login" matTooltip="Login">
+                    Login
+                </li>
+                <li *ngIf = "authService.loggedIn" routerLinkActive="active" routerLink="logout" matTooltip="Logout"> 
+                    Logout
+                </li>
+            </ul>
+        </div>
+        <h2 *ngIf="companyDataService.currentUser">Welcome {{companyDataService.currentUser.name | uppercase}} </h2>
+    </div>
+<div>
+    <router-outlet></router-outlet>
+</div>
+
+<div class="footer">
+    <div class="container">Design & Developed by Sachin Singh, Copyrights © 2019 All Rights Reserved by InsuredMine</div>
+</div>
