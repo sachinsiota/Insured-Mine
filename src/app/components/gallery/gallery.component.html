@@ -1,9 +1,9 @@
 <div class="spinner" *ngIf="companyDataService.users.length == 0">
-    <mat-spinner></mat-spinner>
-    <h1>Loading gallery data.....</h1>
+  <mat-spinner></mat-spinner>
+  <h1>Loading gallery data.....</h1>
 </div>
 <div class="row" *ngIf="companyDataService.users">
-<mat-card class="col-3" *ngFor="let user of companyDataService.users">
+  <mat-card class="col-3" *ngFor="let user of companyDataService.users">
     <mat-card-header>
       <mat-card-title>{{user.login | uppercase}}</mat-card-title>
       <mat-card-subtitle>{{user.type}}</mat-card-subtitle>

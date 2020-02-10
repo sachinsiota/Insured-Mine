@@ -1,11 +1,15 @@
 <div class="bgimage"></div>
 <div class="row" *ngIf="homeData">
-<mat-card class="card col-3" *ngFor="let homedata of homeData">
+  <mat-card class="card col-3" *ngFor="let homedata of homeData">
     <mat-card-content>
-        <div><h2>{{homedata.title | uppercase}}</h2></div>
-        <br>
-        <div><p> {{homedata.content}}
-      </p></div>
+      <div>
+        <h2>{{homedata.title | uppercase}}</h2>
+      </div>
+      <br>
+      <div>
+        <p> {{homedata.content}}
+        </p>
+      </div>
     </mat-card-content>
   </mat-card>
 </div>

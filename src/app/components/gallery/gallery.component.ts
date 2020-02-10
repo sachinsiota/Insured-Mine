@@ -7,17 +7,17 @@ import { CompanyDataService } from 'src/app/data-services/company.data.service';
   styleUrls: ['./gallery.component.css']
 })
 export class GalleryComponent implements OnInit {
-  
+
   ngOnInit() {
     this.getAllUsers();
   }
   users = [];
   constructor(public companyDataService: CompanyDataService) { }
 
-  getAllUsers(){
+  getAllUsers() {
     this.companyDataService.getAllUsers()
-    .subscribe();
+      .subscribe();
 
-}
+  }
 
 }

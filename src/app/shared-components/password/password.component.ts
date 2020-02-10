@@ -12,13 +12,13 @@ export class PasswordComponent implements OnInit {
   password: FormGroup;
   showPassword: boolean = false;
 
-   constructor(
-   ) { }
+  constructor(
+  ) { }
 
-   ngOnInit() {
-     this.password = new FormGroup({
+  ngOnInit() {
+    this.password = new FormGroup({
       'password': new FormControl(null, [Validators.required])
-     });
-        this.formReady.emit(this.password);
-   }
+    });
+    this.formReady.emit(this.password);
+  }
 }

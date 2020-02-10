@@ -9,16 +9,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./logout.component.css']
 })
 export class LogoutComponent implements OnInit {
-disableLogout:boolean=false;
-constructor(public authService:AuthService, private router: Router) { }
+  disableLogout: boolean = false;
+  constructor(public authService: AuthService, private router: Router) { }
   ngOnInit() {
-      if(this.authService.isAuthenticated()){
-        this.disableLogout=true;
-        this.authService.logout();
-        this.router.navigate(['home']);
-  }
-  else{
-    this.router.navigate(['/login']);
-  }
+    if (this.authService.isAuthenticated()) {
+      this.disableLogout = true;
+      this.authService.logout();
+      this.router.navigate(['home']);
+    }
+    else {
+      this.router.navigate(['/login']);
+    }
   }
 }

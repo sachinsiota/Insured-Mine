@@ -1,8 +1,9 @@
 .spinner{
-    text-align: center;
-    max-width: 250px;
-    margin: 0 auto;
+text-align: center;
+max-width: 250px;
+margin: 0 auto;
 }
+
 .card img{
-    width:70%;
+width:70%;
 }

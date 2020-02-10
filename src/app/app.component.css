@@ -1,78 +1,76 @@
 *{
-	margin:0px;
-    padding:0px;
-    overflow-x: hidden;
-    overflow-y: hidden;
+margin:0px;
+padding:0px;
+overflow-x: hidden;
+overflow-y: hidden;
 }
 
 .menu{
-	width: 100%;
-	height: 100px;
-	background-color: #F96F33;
+width: 100%;
+height: 100px;
+background-color: #F96F33;
 }
 
 .leftmenu{
-	width: 20%;
-	line-height: 100px;
-	float: left;
-/*	background-color: yellow;*/
+width: 20%;
+line-height: 100px;
+float: left;
 }
 
 .leftmenu .logo{
-	padding: 13px;
-    font-weight: bold;
-    width: 175px;
-    height: 70px;
-	font-size: 22px;
+padding: 13px;
+font-weight: bold;
+width: 175px;
+height: 70px;
+font-size: 22px;
 }
 
-
 .rightmenu{
-	width:70%;
-	height: 100px;
-	float: right;
+width:70%;
+height: 100px;
+float: right;
 }
 
 .rightmenu ul{
-	margin-left: 200px;
+margin-left: 200px;
 }
 
 .rightmenu ul li {
-	display: inline-block;
-	list-style: none;
-	font-size: 15px;
-	color:white;
-	font-weight: bold;
-	line-height: 100px;
-	margin-left: 40px;
-    text-transform: uppercase;
-	cursor: pointer;
-	outline: 0;
+display: inline-block;
+list-style: none;
+font-size: 15px;
+color:white;
+font-weight: bold;
+line-height: 100px;
+margin-left: 40px;
+text-transform: uppercase;
+cursor: pointer;
+outline: 0;
 
 }
 
 .rightmenu ul li.active{
-	color:#ABE9C8;
+color:#ABE9C8;
 }
 
 .rightmenu ul li:hover{
-	color: orange;
+color: orange;
 }
 
 h2{
-	text-align: center;
-	color: #ABE9C8;
-	margin: 32px;
+text-align: center;
+color: #ABE9C8;
+margin: 32px;
 }
 
 .footer{
-    width: 100%;       
-    background: #F96F33;
-    margin-bottom: 0px;;
-    padding: 10px 0;
-    color: #fff;
-    text-align: center;
+width: 100%;       
+background: #F96F33;
+margin-bottom: 0px;;
+padding: 10px 0;
+color: #fff;
+text-align: center;
 }
 .footer{
-    bottom: 0;
+bottom: 0;
 }

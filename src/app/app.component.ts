@@ -9,11 +9,11 @@ import { CompanyDataService } from './data-services/company.data.service';
 })
 export class AppComponent implements OnInit, AfterViewChecked {
 
-  constructor(public authService: AuthService, public cdRef:ChangeDetectorRef, public companyDataService: CompanyDataService){}
+  constructor(public authService: AuthService, public cdRef: ChangeDetectorRef, public companyDataService: CompanyDataService) { }
 
   ngAfterViewChecked() {
-     this.cdRef.detectChanges();
-     this.cdRef.markForCheck();
+    this.cdRef.detectChanges();
+    this.cdRef.markForCheck();
   }
 
   ngOnInit() {

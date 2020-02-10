@@ -14,22 +14,22 @@ import { AuthService } from '../services/auth.service';
   providedIn: 'root',
 })
 export class AuthGuard implements CanActivate, CanActivateChild {
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(private authService: AuthService, private router: Router) { }
 
   canActivate(route: ActivatedRouteSnapshot,
-              state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
+    state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
     //return this.authService.isAuthenticated()
-    if(this.authService.isAuthenticated() === true) {
+    if (this.authService.isAuthenticated() === true) {
       return true;
-  }
+    }
     else {
-          this.router.navigate(['/login']);
-          return false;
+      this.router.navigate(['/login']);
+      return false;
     }
   }
 
   canActivateChild(route: ActivatedRouteSnapshot,
-              state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
-                return this.canActivate(route, state);
-              }
+    state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
+    return this.canActivate(route, state);
+  }
 }
