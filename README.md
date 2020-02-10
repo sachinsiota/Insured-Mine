@@ -7,7 +7,7 @@ An Add-on to any Agency Management System that helps Agents with sales, engageme
 
 ## Prerequisite 
 
-node and angular installed in local system.
+node installed in local system.
 
 ## Development server
 
