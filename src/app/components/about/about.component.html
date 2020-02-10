@@ -1,0 +1,16 @@
+<div class="row">
+    <img src="../../../assets/image/aboutpic.png" alt="about picture">
+</div>
+<div class="row" *ngIf="aboutData">
+    <mat-card class="card" *ngFor="let item of aboutData">
+        <mat-card-content>
+            <div>
+                <h2>{{item.title | uppercase}}</h2>
+            </div>
+            <br>
+            <div>
+                <p>{{item.content}}</p>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

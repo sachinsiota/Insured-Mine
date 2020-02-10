@@ -1,0 +1,9 @@
+<form [formGroup]="email">
+    <mat-form-field class="mat-form-field">
+        <input type="text" matInput placeholder="Email address" formControlName="email"
+            matTooltip="Please enter your Email address" autocomplete="on" autofocus>
+    </mat-form-field>
+<!-- <mat-error *ngIf="!emailPhone.get('email').valid && emailPhone.get('email').touched">
+    Invalid Email or Phone Number!
+</mat-error> -->
+</form>
