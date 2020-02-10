@@ -7,19 +7,19 @@ import { ValidatorFn } from "@angular/forms";
 })
 export class CustomValidators {
 
-constructor(){
+  constructor() {
 
-}
+  }
 
-// Custom Validator for email
-emailValidator(control: FormControl): {[key: string]: boolean} | null {
-  var emailPhone = control.value;
-  //This is for email
-  if(!Validators.email(control)) {
-  return null;
+  // Custom Validator for email
+  emailValidator(control: FormControl): { [key: string]: boolean } | null {
+    var emailPhone = control.value;
+    //This is for email
+    if (!Validators.email(control)) {
+      return null;
+    }
+    else {
+      return { 'emailPhone': false };
+    }
   }
-  else {
-    return {'emailPhone': false };
-  }
-}
 }

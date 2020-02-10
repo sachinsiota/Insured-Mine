@@ -6,31 +6,29 @@ import { CompanyDataService } from '../data-services/company.data.service';
 })
 export class AuthService {
   loggedIn: boolean = false;
-  //sessionLoggedIn: boolean = false;
 
   constructor(private companyDataService: CompanyDataService) {
-    if(localStorage.getItem("loggedIn")){
+    if (localStorage.getItem("loggedIn")) {
       this.loggedIn = true;
     }
-  this.isAuthenticated();
+    this.isAuthenticated();
   }
 
   isAuthenticated(): boolean {
-  return this.loggedIn;
-}
+    return this.loggedIn;
+  }
 
-login(user) {
-  localStorage.setItem("userId", user.userId);
-  localStorage.setItem("loggedIn", 'true');
-  this.loggedIn = true;
-}
+  login(user) {
+    localStorage.setItem("userId", user.userId);
+    localStorage.setItem("loggedIn", 'true');
+    this.loggedIn = true;
+  }
 
-logout() {
-  this.loggedIn = false;
-  //localStorage.clear();
-  localStorage.removeItem("loggedIn");
-  localStorage.removeItem("userId");
-  this.companyDataService.currentUser = null;
-}
+  logout() {
+    this.loggedIn = false;
+    localStorage.removeItem("loggedIn");
+    localStorage.removeItem("userId");
+    this.companyDataService.currentUser = null;
+  }
 
 }

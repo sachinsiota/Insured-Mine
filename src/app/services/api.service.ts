@@ -9,11 +9,12 @@ export class ApiService {
   protected readonly baseUrl: string;
 
   constructor(protected http: HttpClient,
-  )  {
+  ) {
     this.baseUrl = "https://api.github.com/";
   }
 
-  getAllUsers():Observable<any>{
+  // GET ALL GITHUB USERS
+  getAllUsers(): Observable<any> {
     return this.http.get<any>(this.baseUrl + "users");
   }
 }

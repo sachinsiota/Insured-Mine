@@ -1,29 +1,23 @@
 <div class="row center" *ngIf="!this.authService.isAuthenticated()">
-    <div class="col-12 col-sm-10 col-md-6 col-lg-5 col-xl-4 mx-auto">
-      <mat-card>
-        <mat-card-header class="mat-card-header">
-          <mat-card-title class="mat-card-title">Sign in with InsuredMine</mat-card-title>
-        </mat-card-header>
-        <mat-card-content class="mat-card-content">
-          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-            <app-email (formReady)="formInitialized('email', $event)">
-            </app-email>
-            <app-password (formReady)="formInitialized('password', $event)">
-            </app-password>
-            <div>
-              <button
-                mat-raised-button
-                color="primary"
-                class="text-uppercase rounded-btn"
-                type="submit"
-                matTooltip="Click to sign in"
-                [disabled]="loginForm.invalid">
-                Sign In
-              </button>
-            </div>
-          </form>
-        </mat-card-content>
-      </mat-card>
-    </div>
+  <div class="col-12 col-sm-10 col-md-6 col-lg-5 col-xl-4 mx-auto">
+    <mat-card>
+      <mat-card-header class="mat-card-header">
+        <mat-card-title class="mat-card-title">Sign in with InsuredMine</mat-card-title>
+      </mat-card-header>
+      <mat-card-content class="mat-card-content">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <app-email (formReady)="formInitialized('email', $event)">
+          </app-email>
+          <app-password (formReady)="formInitialized('password', $event)">
+          </app-password>
+          <div>
+            <button mat-raised-button color="primary" class="text-uppercase rounded-btn" type="submit"
+              matTooltip="Click to sign in" [disabled]="loginForm.invalid">
+              Sign In
+            </button>
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
   </div>
-  
+</div>

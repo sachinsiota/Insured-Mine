@@ -12,12 +12,12 @@ export class EmailComponent implements OnInit {
   @Output() formReady = new EventEmitter<FormGroup>();
   email: FormGroup;
 
-   constructor(private customValidators: CustomValidators) { }
+  constructor(private customValidators: CustomValidators) { }
 
-   ngOnInit() {
-     this.email = new FormGroup({
-       'email': new FormControl(null, [Validators.required, this.customValidators.emailValidator])
-     });
-        this.formReady.emit(this.email);
-   }
+  ngOnInit() {
+    this.email = new FormGroup({
+      'email': new FormControl(null, [Validators.required, this.customValidators.emailValidator])
+    });
+    this.formReady.emit(this.email);
+  }
 }
