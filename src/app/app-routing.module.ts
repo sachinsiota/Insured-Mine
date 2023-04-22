@@ -7,6 +7,8 @@ import { AboutComponent } from './components/about/about.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 import { LogoutComponent } from './components/logout/logout.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
+import { UserlistComponent } from './userlist/userlist.component';
+import { AuthGuard } from './interceptors and gaurd/auth-guard.service';
 
 
 const routes: Routes = [
@@ -16,6 +18,7 @@ const routes: Routes = [
   { path: 'gallery', canActivate: [RoleGuard], component: GalleryComponent },
   { path: 'about', component: AboutComponent },
   { path: 'logout', component: LogoutComponent },
+  { path: 'userlist', canActivate: [AuthGuard], component: UserlistComponent },
   { path: '**', component: PagenotfoundComponent }
 ];
 

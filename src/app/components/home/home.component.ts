@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, FormArray, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -28,9 +29,43 @@ export class HomeComponent implements OnInit {
         'document, or anything, don’t let it fall through the cracks. ' +
         'Task Manager will help you organize, collaborate and exceed expectations!'
     }];
-  constructor() { }
+
+numberarray = [3, 4, 5, 6, 7, 8];
+addForm: FormGroup;
+totalSum = 0;
+
+
+
+  userList: any;
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
+
+    this.addForm = this.fb.group({
+      formArray: this.fb.array([
+      ])
+    })
   }
+
+  addFields() {
+    let arrayControl = <FormArray>this.addForm.controls['formArray'];
+    let field = this.fb.group({
+      add: ''
+    });
+    arrayControl.push(field);
+  }
+
+  optionSelected(number){
+    for (let i = 0; i < number ; i++){
+      this.addFields();
+    }
+  }
+
+  onSubmit(){
+    this.totalSum = 0;
+    for(let i = 0; i < this.addForm.value.formArray.length; i++){
+      this.totalSum = +this.addForm.value.formArray[i].add + this.totalSum;
+    }
+    }
 
 }

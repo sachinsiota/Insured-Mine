@@ -15,6 +15,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LogoutComponent } from './components/logout/logout.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GalleryComponent } from './components/gallery/gallery.component';
+import { UserlistComponent } from './userlist/userlist.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { GalleryComponent } from './components/gallery/gallery.component';
     PagenotfoundComponent,
     EmailComponent,
     PasswordComponent,
-    LogoutComponent
+    LogoutComponent,
+    UserlistComponent
   ],
   imports: [
     BrowserModule,

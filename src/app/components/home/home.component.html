@@ -1,4 +1,4 @@
-<div class="bgimage"></div>
+<!-- <div class="bgimage"></div>
 <div class="row" *ngIf="homeData">
   <mat-card class="card col-3" *ngFor="let homedata of homeData">
     <mat-card-content>
@@ -12,4 +12,33 @@
       </div>
     </mat-card-content>
   </mat-card>
+</div> -->
+
+<!-- javascript task  -->
+
+<div>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+      <mat-form-field>
+          <mat-label>Select Number</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let number of numberarray" [value]="number" (click)="optionSelected(number)">
+              {{number}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      <div formArrayName="formArray">
+          <div *ngFor= "let control of addForm.controls['formArray'].controls; let i = index">
+            <div [formGroupName]= "i">
+              <input type="text" formControlName= 'add'/>
+            </div>
+          </div>
+      </div>
+      <div>
+        <button mat-raised-button color="primary" class="text-uppercase rounded-btn" type="submit"
+          matTooltip="Click to sign in" [disabled]="addForm.invalid">
+          Sum
+        </button>
+        Sum : {{totalSum}}
+      </div>
+    </form> 
 </div>

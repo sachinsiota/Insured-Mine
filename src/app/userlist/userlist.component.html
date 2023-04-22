@@ -1,0 +1,13 @@
+<div class="spinner" *ngIf="usertList == 0">
+    <mat-spinner></mat-spinner>
+    <h1>Loading user data.....</h1>
+  </div>
+  <div class="row" *ngIf="userList">
+    <mat-card class="col-3" *ngFor="let user of userList">
+      <mat-card-header>
+        <mat-card-title>{{user.first_name + ' ' + user.last_name  | uppercase}}</mat-card-title>
+        <mat-card-subtitle>{{user.email}}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="{{user.avatar}}" alt="{{user.first_name}}">
+    </mat-card>
+  </div>

@@ -4,13 +4,14 @@ import { ApiService } from '../services/api.service';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { User } from '../interface/user.interface';
+import { Router } from '@angular/router';
 
 
 @Injectable({
   providedIn: 'root',
 })
 export class CompanyDataService {
-  constructor(private apiService: ApiService, public snackBar: MatSnackBar) {
+  constructor(private apiService: ApiService, public snackBar: MatSnackBar, public router: Router) {
     let userId = localStorage.getItem("userId");
     if (userId) {
       this.currentUser = this.usersDb.find(user => user.userId == userId);
@@ -30,6 +31,18 @@ export class CompanyDataService {
   ];
   users = [];
   currentUser: User;
+
+  fetchUser():Observable<any> {
+    return this.apiService.fetchUser()
+      .pipe(map(
+        (response) => {
+          if(response){
+          return response;
+          }
+        }
+      ));
+  }
+
   getAllUsers(): Observable<any> {
     return this.apiService.getAllUsers()
       .pipe(map(
